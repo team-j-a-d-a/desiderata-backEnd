@@ -1,6 +1,6 @@
 #!/bin/bash
 
-API="http://localhost:4741"
+API="http://localhost:7165"
 URL_PATH="/sign-in"
 
 curl "${API}${URL_PATH}" \
