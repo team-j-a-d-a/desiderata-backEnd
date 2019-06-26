@@ -1,3 +1,4 @@
+
 // Express docs: http://expressjs.com/en/api.html
 
 const express = require('express')
@@ -46,15 +47,15 @@ router.get('/activities', requireToken, (req, res, next) => {
 
 // SHOW
 // GET /activities/5a7db6c74d55bc51bdf39793
-// router.get('/activities/:id', requireToken, (req, res, next) => {
-//   // req.params.id will be set based on the `:id` in the route
-//   activity.findById(req.params.id)
-//     .then(handle404)
-//     // if `findById` is succesful, respond with 200 and "activity" JSON
-//     .then(activity => res.status(200).json({ activity: activity.toObject() }))
-//     // if an error occurs, pass it to the handler
-//     .catch(next)
-// })
+router.get('/activities/:id', requireToken, (req, res, next) => {
+  // req.params.id will be set based on the `:id` in the route
+  Activity.findById(req.params.id)
+    .then(handle404)
+    // if `findById` is succesful, respond with 200 and "activity" JSON
+    .then(activity => res.status(200).json({ activity: activity.toObject() }))
+    // if an error occurs, pass it to the handler
+    .catch(next)
+})
 
 // CREATE
 // POST /activities
