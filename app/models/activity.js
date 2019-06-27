@@ -8,7 +8,7 @@ const bucketSchema = new mongoose.Schema({
   },
   description: {
     type: String,
-    required: false
+    required: true
   },
   completed: {
     type: Boolean,
