@@ -80,23 +80,22 @@ router.patch('/activities/:id', requireToken, removeBlanks, (req, res, next) => 
   // if the client attempts to change the `owner` property by including a new
   // owner, prevent that by deleting that key/value pair
   delete req.body.activity.owner
-})
 
-//   activity.findById(req.params.id)
-//     .then(handle404)
-//     .then(activity => {
-//       // pass the `req` object and the Mongoose record to `requireOwnership`
-//       // it will throw an error if the current user isn't the owner
-//       requireOwnership(req, activity)
-//
-//       // pass the result of Mongoose's `.update` to the next `.then`
-//       return activity.update(req.body.activity)
-//     })
-//     // if that succeeded, return 204 and no JSON
-//     .then(() => res.sendStatus(204))
-//     // if an error occurs, pass it to the handler
-//     .catch(next)
-// })
+  Activity.findById(req.params.id)
+    .then(handle404)
+    .then(activity => {
+      // pass the `req` object and the Mongoose record to `requireOwnership`
+      // it will throw an error if the current user isn't the owner
+      requireOwnership(req, activity)
+
+      // pass the result of Mongoose's `.update` to the next `.then`
+      return activity.update(req.body.activity)
+    })
+    // if that succeeded, return 204 and no JSON
+    .then(() => res.sendStatus(204))
+    // if an error occurs, pass it to the handler
+    .catch(next)
+})
 
 // DESTROY
 // DELETE /activities/5a7db6c74d55bc51bdf39793
@@ -107,7 +106,7 @@ router.delete('/activities/:id', requireToken, (req, res, next) => {
       // throw an error if current user doesn't own `activity`
       requireOwnership(req, activity)
       // delete the activity ONLY IF the above didn't throw
-      Activity.remove()
+      activity.remove()
     })
     // send back 204 and no content if the deletion succeeded
     .then(() => res.sendStatus(204))

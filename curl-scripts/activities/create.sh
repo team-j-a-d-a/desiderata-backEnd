@@ -12,7 +12,8 @@ curl "${API}${URL_PATH}" \
   --data '{
     "activity": {
       "title": "'"${TITLE}"'",
-      "description": "'"${DESC}"'"
+      "description": "'"${DESC}"'",
+      "completed": "'"${COMP}"'"
     }
   }'
 
