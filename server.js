@@ -30,7 +30,7 @@ const app = express()
 
 // set CORS headers on response from this API using the `cors` NPM package
 // `CLIENT_ORIGIN` is an environment variable that will be set on Heroku
-app.use(cors({ origin: process.env.CLIENT_ORIGIN || 'http://localhost:7165' }))
+app.use(cors({ origin: process.env.CLIENT_ORIGIN || 'http://localhost:4741' }))
 
 // define port for API to run on
 const port = process.env.PORT || 7165
@@ -68,7 +68,7 @@ app.use(bucketRoutes)
 // passed any error messages from them
 app.use(errorHandler)
 
-// run API on designated port (4741 in this case)
+// run API on designated port (7165 in this case)
 app.listen(port, () => {
   console.log('listening on port ' + port)
 })
