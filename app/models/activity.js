@@ -16,10 +16,6 @@ const bucketSchema = new mongoose.Schema({
     default: false
 
   },
-  // dueDate: {
-  //   type: date,
-  //   required: false
-  // },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
