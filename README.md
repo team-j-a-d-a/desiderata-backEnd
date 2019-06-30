@@ -23,6 +23,10 @@ USER STORIES
 8. As a signed in user, I would like to see all my bucket list items but not other users.
 9. As a signed in user, I would like to cross off items to complete them.
 
+ERD DIAGRAM: https://bit.ly/2KRnJSL
+WIREFRAME: https://bit.ly/321etkl
+
+
 LINK TO REPOSITORIES
 
 https://github.com/team-j-a-d-a/desiderata-backEnd
