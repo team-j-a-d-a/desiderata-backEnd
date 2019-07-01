@@ -67,8 +67,8 @@ Screen sharing (with a projector and google hangouts) proved to be very helpful 
 
 GOALS FOR FUTURE ITERATIONS
 
-Putting a flexbox for handlebars to make it into a grid
-Changing opacity of the box upon completing an activity
-Adding a due date to completing activities
-Displaying popular bucket list from other users
-Adding a blog component about completing bucket list activities
+1. Putting a flexbox for handlebars to make it into a grid
+2. Changing opacity of the box upon completing an activity
+3. Adding a due date to completing activities
+4. Displaying popular bucket list from other users
+5. Adding a blog component about completing bucket list activities
