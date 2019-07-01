@@ -32,7 +32,7 @@ const router = express.Router()
 // INDEX
 // GET /activities
 router.get('/activities', requireToken, (req, res, next) => {
-  Activity.find()
+  Activity.find({owner: req.user.id})
     .then(activities => {
       // `activities` will be an array of Mongoose documents
       // we want to convert each one to a POJO, so we use `.map` to
@@ -49,6 +49,7 @@ router.get('/activities', requireToken, (req, res, next) => {
 // GET /activities/5a7db6c74d55bc51bdf39793
 router.get('/activities/:id', requireToken, (req, res, next) => {
   // req.params.id will be set based on the `:id` in the route
+
   Activity.findById(req.params.id)
     .then(handle404)
     // if `findById` is succesful, respond with 200 and "activity" JSON
