@@ -12,14 +12,9 @@ const bucketSchema = new mongoose.Schema({
   },
   completed: {
     type: Boolean,
-    required: true,
-    default: false
+    required: false
 
   },
-  // dueDate: {
-  //   type: date,
-  //   required: false
-  // },
   owner: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'User',
