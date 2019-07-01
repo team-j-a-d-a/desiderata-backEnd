@@ -64,3 +64,11 @@ At the beginning the team reached an agreement that first priority was was to wo
 The scrum framework enabled just-in-time planning and ensured consistent progress towards end goals. Andre was scrum master. Anna was product owner. Jordan and Dave were developers. All the team members contributed code on the front and back end. The biggest challenge was incorporating everyone's contributions into github and resolving conflicts. Given the three day timeframe time management was of utmost importance.
 
 Screen sharing (with a projector and google hangouts) proved to be very helpful for problem solving. Working as a team towards finding a solution sped up successful completion for project tasks.
+
+GOALS FOR FUTURE ITERATIONS
+
+Putting a flexbox for handlebars to make it into a grid
+Changing opacity of the box upon completing an activity
+Adding a due date to completing activities
+Displaying popular bucket list from other users
+Adding a blog component about completing bucket list activities
